@@ -42,7 +42,7 @@ main {
   border: 1px solid black;
   border-radius: 8px;
   padding: 1.5rem 1rem;
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.4s ease-out;
 }
 .character__card:hover {
   background-color: rgb(161, 199, 221);
@@ -65,12 +65,11 @@ main {
   font-size: 1.2rem;
 }
 .character__info--extra {
-  display: inherit;
   flex-direction: inherit;
   row-gap: inherit;
   font-size: inherit;
-  /* display: none;
-  opacity: 0; */
+  display: none;
+  opacity: 0;
 }
 .attribute {
   font-weight: bold;
@@ -94,4 +93,10 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
+}
+
+/* Show element class */
+.show_element--flex {
+  display: flex;
+  opacity: 1;
 }
