@@ -1,6 +1,19 @@
 "use strict";
 const url = "https://swapi.dev/api/people";
 
+const images = [
+  "Luke.webp",
+  "C-3PO.webp",
+  "R2D2.webp",
+  "Darth.webp",
+  "Leia.webp",
+  "Owen.webp",
+  "Beru.webp",
+  "R5.webp",
+  "Biggs.webp",
+  "Obi.webp",
+];
+
 const fetchAPIContent = async (url) => {
   const response = await fetch(url);
 
@@ -11,13 +24,11 @@ const fetchAPIContent = async (url) => {
   return responseData;
 };
 
-const createCard = (name, height, gender) => {
+const createCard = (name, height, gender, index) => {
   let div = document.createElement("div");
   div.className = "character__card";
   div.innerHTML = `
-        <div class="image__container">
-          <img src="./assets/dexter-cropped.jpeg" alt="${name}" class="character__image">
-        </div>
+        <img src="./assets/${images[index]}" alt="${name}" class="character__image">
         <div class="character__info">
           <p class="name"><span class="attribute">Name: </span> <span class="character__name">${name}</span></p>
           <div class="character__info--extra">
@@ -33,8 +44,8 @@ const appendCharacterCards = (charactersContainer) => {
   fetchAPIContent(url)
     .then((responseData) => {
       let characters = responseData.results;
-      characters.forEach(({ name, height, gender }) => {
-        let card = createCard(name, height, gender);
+      characters.forEach(({ name, height, gender }, index) => {
+        let card = createCard(name, height, gender, index);
         charactersContainer.appendChild(card);
       });
     })

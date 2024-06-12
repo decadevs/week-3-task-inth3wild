@@ -28,5 +28,5 @@ const hideExtraInfo = (targetParent) => {
     }
   });
 };
-
+// Add the characters to the DOM
 appendCharacterCards(charactersContainer);

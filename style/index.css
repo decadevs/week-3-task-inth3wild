@@ -54,8 +54,9 @@ main {
 .character__image {
   width: 110px;
   height: 110px;
-  border: 5px solid cornflowerblue;
+  border: 3px solid cornflowerblue;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .character__info {
