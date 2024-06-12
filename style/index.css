@@ -68,8 +68,10 @@ main {
   flex-direction: inherit;
   row-gap: inherit;
   font-size: inherit;
-  display: none;
+  overflow: hidden;
   opacity: 0;
+  height: 0;
+  transition: opacity 0.8s ease, height 0.8s ease;
 }
 .attribute {
   font-weight: bold;
@@ -99,4 +101,5 @@ main {
 .show_element--flex {
   display: flex;
   opacity: 1;
+  height: fit-content;
 }

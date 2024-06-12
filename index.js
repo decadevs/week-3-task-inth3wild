@@ -1,4 +1,5 @@
 "use strict";
+import appendCharacterCards from "./api.js";
 
 const charactersContainer = document.querySelector(".characters");
 
@@ -27,3 +28,5 @@ const hideExtraInfo = (targetParent) => {
     }
   });
 };
+
+appendCharacterCards(charactersContainer);
