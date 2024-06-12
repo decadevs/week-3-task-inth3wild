@@ -3,6 +3,9 @@ import appendCharacterCards from "./api.js";
 
 const charactersContainer = document.querySelector(".characters");
 
+// Add the characters to the DOM
+appendCharacterCards(charactersContainer);
+
 charactersContainer.addEventListener("click", (event) => {
   let targetParent = event.target.parentElement;
   if (targetParent.className === "name") {
@@ -28,5 +31,3 @@ const hideExtraInfo = (targetParent) => {
     }
   });
 };
-// Add the characters to the DOM
-appendCharacterCards(charactersContainer);
