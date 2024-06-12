@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 *,
 body,
 html {
@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: khaki;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  background: url("../assets/Space-background.webp");
 }
 
 main {
@@ -25,6 +25,9 @@ main {
 
 .title {
   text-align: center;
+  color: rgb(255, 255, 31);
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .characters {
@@ -39,24 +42,29 @@ main {
   display: flex;
   align-items: center;
   column-gap: 1rem;
-  border: 1px solid black;
   border-radius: 8px;
   padding: 1.5rem 1rem;
+  background-color: rgb(58, 66, 66);
+  color: white;
   transition: background-color 0.4s ease-out;
 }
 .character__card:hover {
-  background-color: rgb(161, 199, 221);
+  background-color: rgb(144, 238, 149);
+  color: black;
 }
 
-/* .image__container {
-} */
-
 .character__image {
-  width: 110px;
+  min-width: 110px;
   height: 110px;
-  border: 3px solid cornflowerblue;
+  border: 2px solid rgb(144, 238, 149);
   border-radius: 50%;
   object-fit: cover;
+}
+.character__card:hover .character__image {
+  border-color: white;
+}
+.character__card:hover .character__name {
+  border-color: black;
 }
 
 .character__info {
@@ -78,8 +86,8 @@ main {
   font-weight: bold;
 }
 .character__name {
-  text-decoration: underline;
   cursor: pointer;
+  border-bottom: 2px dotted white;
 }
 
 /* Responsiveness for Tablet */
